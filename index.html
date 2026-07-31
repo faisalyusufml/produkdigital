@@ -36,10 +36,11 @@
         </div>
         <div class="p-5 pt-0 flex items-center justify-between mt-4">
           <span class="text-lg font-bold text-gray-900">Rp 49.000</span>
-          <!-- Tombol Membuka Modal Checkout Lynk.id -->
-          <button onclick="openLynkModal('https://lynk.id/produkdigital.hub/4190nvd79klw/checkout?token=cGFyYW1zPSU1QiU1RCZ0aWNrZXRzPSU1QiU1RCZiaWRfcHJpY2U9MCZxdHlfcHJvZD0xJnNlc3NpZD0mdG90YWxfcHJpY2U9JnRvdGFsX3VuaXQ9')" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm px-4 py-2 rounded-lg transition">
-            Beli Sekarang
-          </button>
+          <!-- Tombol Direct Link ke Tab Baru -->
+          <a href="https://lynk.id/username/produk-ebook" target="_blank" rel="noopener noreferrer" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm px-4 py-2 rounded-lg transition inline-flex items-center gap-1">
+            Beli Sekarang 
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          </a>
         </div>
       </div>
 
@@ -55,9 +56,10 @@
         </div>
         <div class="p-5 pt-0 flex items-center justify-between mt-4">
           <span class="text-lg font-bold text-gray-900">Rp 79.000</span>
-          <button onclick="openLynkModal('https://lynk.id/username/produk-notion')" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm px-4 py-2 rounded-lg transition">
+          <a href="https://lynk.id/username/produk-notion" target="_blank" rel="noopener noreferrer" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm px-4 py-2 rounded-lg transition inline-flex items-center gap-1">
             Beli Sekarang
-          </button>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          </a>
         </div>
       </div>
 
@@ -73,32 +75,15 @@
         </div>
         <div class="p-5 pt-0 flex items-center justify-between mt-4">
           <span class="text-lg font-bold text-gray-900">Rp 29.000</span>
-          <button onclick="openLynkModal('https://lynk.id/username/produk-preset')" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm px-4 py-2 rounded-lg transition">
+          <a href="https://lynk.id/username/produk-preset" target="_blank" rel="noopener noreferrer" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm px-4 py-2 rounded-lg transition inline-flex items-center gap-1">
             Beli Sekarang
-          </button>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          </a>
         </div>
       </div>
 
     </div>
   </main>
-
-  <!-- Modal Checkout Popup -->
-  <div id="lynkModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 backdrop-blur-sm">
-    <div class="bg-white rounded-2xl w-full max-w-lg overflow-hidden shadow-2xl relative">
-      
-      <!-- Header Modal & Tombol Close -->
-      <div class="flex justify-between items-center p-4 border-b border-gray-100 bg-gray-50">
-        <h3 class="font-bold text-gray-800 text-sm">Proses Pembayaran</h3>
-        <button onclick="closeLynkModal()" class="text-gray-400 hover:text-gray-600 text-2xl font-bold leading-none">&times;</button>
-      </div>
-
-      <!-- Content Area: Iframe Lynk.id -->
-      <div class="h-[550px] w-full bg-white">
-        <iframe id="lynkIframe" src="" class="w-full h-full border-0"></iframe>
-      </div>
-
-    </div>
-  </div>
 
   <!-- Footer Section -->
   <footer class="bg-white border-t border-gray-200 mt-16 py-8">
@@ -107,32 +92,6 @@
       <p class="mt-1">Hosted for free on <a href="https://pages.github.com" class="text-indigo-600 hover:underline" target="_blank">GitHub Pages</a>.</p>
     </div>
   </footer>
-
-  <!-- JavaScript Modal Handler -->
-  <script>
-    function openLynkModal(url) {
-      document.getElementById('lynkIframe').src = url;
-      document.getElementById('lynkModal').classList.remove('hidden');
-      document.getElementById('lynkModal').classList.add('flex');
-      // Mencegah halaman utama bisa di-scroll saat modal terbuka
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeLynkModal() {
-      document.getElementById('lynkModal').classList.add('hidden');
-      document.getElementById('lynkModal').classList.remove('flex');
-      document.getElementById('lynkIframe').src = '';
-      // Mengembalikan scroll halaman utama
-      document.body.style.overflow = 'auto';
-    }
-
-    // Menutup modal jika pengguna mengklik area hitam diluar modal
-    document.getElementById('lynkModal').addEventListener('click', function(e) {
-      if (e.target === this) {
-        closeLynkModal();
-      }
-    });
-  </script>
 
 </body>
 </html>
