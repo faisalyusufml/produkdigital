@@ -25,58 +25,114 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
       <!-- Card Produk 1 -->
-      <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition">
-        <img src="https://picsum.photos/seed/ebook/600/400" alt="Cover Ebook" class="w-full h-48 object-cover">
-        <div class="p-5">
-          <span class="text-xs font-semibold text-indigo-600 uppercase tracking-wider">E-Book</span>
-          <h3 class="text-xl font-bold text-gray-900 mt-1">Panduan Mastering Tailwind CSS</h3>
-          <p class="text-gray-600 text-sm mt-2 line-clamp-2">Pelajari cara membangun UI responsif dan modern tanpa penulisan CSS manual.</p>
-          <div class="mt-4 flex items-center justify-between">
-            <span class="text-lg font-bold text-gray-900">Rp 49.000</span>
-            <!-- Ganti URL di bawah dengan link checkout (Mayar/Lemon Squeezy) -->
-            <a href="https://mayar.id" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm px-4 py-2 rounded-lg transition">Beli Sekarang</a>
+      <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+        <div>
+          <img src="https://picsum.photos/seed/ebook/600/400" alt="Cover Ebook" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <span class="text-xs font-semibold text-indigo-600 uppercase tracking-wider">E-Book</span>
+            <h3 class="text-xl font-bold text-gray-900 mt-1">Panduan Mastering Tailwind CSS</h3>
+            <p class="text-gray-600 text-sm mt-2">Pelajari cara membangun UI responsif dan modern tanpa penulisan CSS manual.</p>
           </div>
+        </div>
+        <div class="p-5 pt-0 flex items-center justify-between mt-4">
+          <span class="text-lg font-bold text-gray-900">Rp 49.000</span>
+          <!-- Tombol Membuka Modal Checkout Lynk.id -->
+          <button onclick="openLynkModal('https://lynk.id/username/produk-ebook')" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm px-4 py-2 rounded-lg transition">
+            Beli Sekarang
+          </button>
         </div>
       </div>
 
       <!-- Card Produk 2 -->
-      <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition">
-        <img src="https://picsum.photos/seed/notion/600/400" alt="Cover Template" class="w-full h-48 object-cover">
-        <div class="p-5">
-          <span class="text-xs font-semibold text-emerald-600 uppercase tracking-wider">Template Notion</span>
-          <h3 class="text-xl font-bold text-gray-900 mt-1">Ultimate Creator Planner</h3>
-          <p class="text-gray-600 text-sm mt-2 line-clamp-2">Sistem manajemen konten serbaguna untuk kreator digital dan freelancer.</p>
-          <div class="mt-4 flex items-center justify-between">
-            <span class="text-lg font-bold text-gray-900">Rp 79.000</span>
-            <a href="https://mayar.id" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm px-4 py-2 rounded-lg transition">Beli Sekarang</a>
+      <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+        <div>
+          <img src="https://picsum.photos/seed/notion/600/400" alt="Cover Template" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <span class="text-xs font-semibold text-emerald-600 uppercase tracking-wider">Template Notion</span>
+            <h3 class="text-xl font-bold text-gray-900 mt-1">Ultimate Creator Planner</h3>
+            <p class="text-gray-600 text-sm mt-2">Sistem manajemen konten serbaguna untuk kreator digital dan freelancer.</p>
           </div>
+        </div>
+        <div class="p-5 pt-0 flex items-center justify-between mt-4">
+          <span class="text-lg font-bold text-gray-900">Rp 79.000</span>
+          <button onclick="openLynkModal('https://lynk.id/username/produk-notion')" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm px-4 py-2 rounded-lg transition">
+            Beli Sekarang
+          </button>
         </div>
       </div>
 
       <!-- Card Produk 3 -->
-      <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition">
-        <img src="https://picsum.photos/seed/preset/600/400" alt="Cover Preset" class="w-full h-48 object-cover">
-        <div class="p-5">
-          <span class="text-xs font-semibold text-amber-600 uppercase tracking-wider">Lightroom Preset</span>
-          <h3 class="text-xl font-bold text-gray-900 mt-1">Cinematic Warm Tones Pack</h3>
-          <p class="text-gray-600 text-sm mt-2 line-clamp-2">10 Preset profesional untuk menghasilkan warna foto bergaya sinematik.</p>
-          <div class="mt-4 flex items-center justify-between">
-            <span class="text-lg font-bold text-gray-900">Rp 29.000</span>
-            <a href="https://mayar.id" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm px-4 py-2 rounded-lg transition">Beli Sekarang</a>
+      <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+        <div>
+          <img src="https://picsum.photos/seed/preset/600/400" alt="Cover Preset" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <span class="text-xs font-semibold text-amber-600 uppercase tracking-wider">Lightroom Preset</span>
+            <h3 class="text-xl font-bold text-gray-900 mt-1">Cinematic Warm Tones Pack</h3>
+            <p class="text-gray-600 text-sm mt-2">10 Preset profesional untuk menghasilkan warna foto bergaya sinematik.</p>
           </div>
+        </div>
+        <div class="p-5 pt-0 flex items-center justify-between mt-4">
+          <span class="text-lg font-bold text-gray-900">Rp 29.000</span>
+          <button onclick="openLynkModal('https://lynk.id/username/produk-preset')" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm px-4 py-2 rounded-lg transition">
+            Beli Sekarang
+          </button>
         </div>
       </div>
 
     </div>
   </main>
 
+  <!-- Modal Checkout Popup -->
+  <div id="lynkModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 backdrop-blur-sm">
+    <div class="bg-white rounded-2xl w-full max-w-lg overflow-hidden shadow-2xl relative">
+      
+      <!-- Header Modal & Tombol Close -->
+      <div class="flex justify-between items-center p-4 border-b border-gray-100 bg-gray-50">
+        <h3 class="font-bold text-gray-800 text-sm">Proses Pembayaran</h3>
+        <button onclick="closeLynkModal()" class="text-gray-400 hover:text-gray-600 text-2xl font-bold leading-none">&times;</button>
+      </div>
+
+      <!-- Content Area: Iframe Lynk.id -->
+      <div class="h-[550px] w-full bg-white">
+        <iframe id="lynkIframe" src="" class="w-full h-full border-0"></iframe>
+      </div>
+
+    </div>
+  </div>
+
   <!-- Footer Section -->
   <footer class="bg-white border-t border-gray-200 mt-16 py-8">
     <div class="max-w-6xl mx-auto px-4 text-center text-gray-500 text-sm">
-      <p>&copy; 2026 Digital Hub Hub. All rights reserved.</p>
-      <p class="mt-1">Hosted for free on <a href="https://pages.github.com" class="text-indigo-600 hover:underline">GitHub Pages</a>.</p>
+      <p>&copy; 2026 Digital Product Hub. All rights reserved.</p>
+      <p class="mt-1">Hosted for free on <a href="https://pages.github.com" class="text-indigo-600 hover:underline" target="_blank">GitHub Pages</a>.</p>
     </div>
   </footer>
+
+  <!-- JavaScript Modal Handler -->
+  <script>
+    function openLynkModal(url) {
+      document.getElementById('lynkIframe').src = url;
+      document.getElementById('lynkModal').classList.remove('hidden');
+      document.getElementById('lynkModal').classList.add('flex');
+      // Mencegah halaman utama bisa di-scroll saat modal terbuka
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLynkModal() {
+      document.getElementById('lynkModal').classList.add('hidden');
+      document.getElementById('lynkModal').classList.remove('flex');
+      document.getElementById('lynkIframe').src = '';
+      // Mengembalikan scroll halaman utama
+      document.body.style.overflow = 'auto';
+    }
+
+    // Menutup modal jika pengguna mengklik area hitam diluar modal
+    document.getElementById('lynkModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeLynkModal();
+      }
+    });
+  </script>
 
 </body>
 </html>
